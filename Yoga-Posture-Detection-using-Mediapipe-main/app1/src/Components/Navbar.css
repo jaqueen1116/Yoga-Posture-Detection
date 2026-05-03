@@ -1,0 +1,51 @@
+.navbar-glass {
+  background: var(--clr-bg-glass) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 0 !important;
+  transition: all var(--transition-normal);
+}
+
+.navbar-brand-premium {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link-premium {
+  color: var(--clr-text-primary) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link-premium:hover {
+  color: var(--clr-accent) !important;
+}
+
+.nav-link-premium::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-accent);
+  transition: width var(--transition-fast);
+  box-shadow: var(--shadow-glow);
+}
+
+.nav-link-premium:hover::after {
+  width: 100%;
+}
+
+/* Custom toggler for glass navbar */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}

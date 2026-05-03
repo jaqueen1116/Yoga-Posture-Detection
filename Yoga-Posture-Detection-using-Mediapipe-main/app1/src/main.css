@@ -1,0 +1,97 @@
+/* CSS Design System Tokens - Zen Opal Theme */
+:root {
+  /* Colors - Matcha & Bamboo Theme */
+  --clr-bg-primary: #1e2920;
+  --clr-bg-secondary: #2d3d30;
+  --clr-bg-glass: rgba(45, 61, 48, 0.6);
+  --clr-bg-glass-light: rgba(255, 255, 255, 0.05);
+  
+  --clr-accent: #a3d9a5;
+  --clr-accent-hover: #85c788;
+  --clr-accent-dim: rgba(163, 217, 165, 0.1);
+  
+  --clr-text-primary: #f0f4f1;
+  --clr-text-secondary: #a3b5a8;
+  --clr-text-inverse: #1e2920;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--clr-bg-primary), var(--clr-bg-secondary));
+  --gradient-accent: linear-gradient(90deg, #a3d9a5, #85c788);
+  
+  /* Shadows & Blur */
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 20px rgba(163, 217, 165, 0.2);
+  --shadow-glow-strong: 0 0 30px rgba(163, 217, 165, 0.4);
+  --blur-md: backdrop-filter: blur(12px);
+  --blur-lg: backdrop-filter: blur(20px);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--clr-bg-primary);
+  color: var(--clr-text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--clr-bg-glass-light);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-subtle);
+  border-radius: 16px;
+}
+
+/* Premium Button Utility */
+.btn-premium {
+  background: var(--clr-accent) !important;
+  color: var(--clr-text-inverse) !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: all var(--transition-normal) !important;
+  box-shadow: var(--shadow-glow) !important;
+  letter-spacing: 0.5px;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-strong) !important;
+  background: var(--clr-accent-hover) !important;
+}
+
+/* Typography Utilities */
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar styling for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-bg-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-text-secondary);
+}
